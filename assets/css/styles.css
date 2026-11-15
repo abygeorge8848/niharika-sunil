@@ -600,24 +600,283 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(100% - 28px, 480px);
+  }
+
   .hero {
-    padding-top: 54px;
+    padding: 38px 0 28px;
   }
 
   .nav-wrap {
-    min-height: 72px;
+    min-height: 0;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 10px 0 0;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .main-nav {
+    order: 3;
+    display: flex;
+    flex: 0 0 100%;
+    gap: 22px;
+    overflow-x: auto;
+    margin: 0;
+    padding: 2px 0 12px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto;
+    padding: 6px 0;
   }
 
   .nav-actions {
-    display: none;
+    gap: 7px;
+  }
+
+  .nav-actions .btn.small {
+    min-height: 36px;
+    padding: 0 11px;
+    font-size: 0.76rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.55rem, 11vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .hero-copy h1 span {
+    margin-top: 12px;
+    font-size: clamp(1.15rem, 5vw, 1.45rem);
+    line-height: 1.25;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .cta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .cta-row .btn {
+    width: 100%;
+  }
+
+  .mini-list {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .mini-list li {
+    padding: 8px 10px;
+    font-size: 0.76rem;
+  }
+
+  .hero-visual {
+    width: min(100%, 380px);
+    margin: 0 auto;
+  }
+
+  .portrait-card {
+    padding: 10px;
+    border-radius: 24px;
+  }
+
+  .portrait-card img {
+    border-radius: 17px;
+  }
+
+  .glow-one {
+    width: 120px;
+    height: 120px;
+    left: -12px;
+  }
+
+  .glow-two {
+    width: 100px;
+    height: 100px;
+    right: -10px;
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .stat-item {
+    padding: 16px 10px;
+    border-radius: 16px;
+  }
+
+  .stat-item strong {
+    font-size: 1.25rem;
+  }
+
+  .stat-item span {
+    font-size: 0.76rem;
   }
 
   .section {
-    padding: 76px 0;
+    padding: 60px 0;
+    scroll-margin-top: 120px;
+  }
+
+  .section-heading h2,
+  .contact-panel h2 {
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  .split-layout {
+    gap: 16px;
+  }
+
+  .about-content {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .pill-group {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .pill-group span {
+    padding: 8px 10px;
+    font-size: 0.72rem;
+  }
+
+  .timeline {
+    margin-top: 24px;
+    padding-left: 8px;
+  }
+
+  .timeline::before {
+    left: 7px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 16px minmax(0, 1fr);
+    gap: 12px;
+    padding-bottom: 18px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-content {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .timeline-meta {
+    font-size: 0.65rem;
+    letter-spacing: 0.09em;
+    line-height: 1.5;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .timeline-content p,
+  .project-card p,
+  .leadership-card p,
+  .insight-card p,
+  .award-item p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .project-grid,
+  .leadership-grid,
+  .insights-grid {
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .project-card,
+  .leadership-card,
+  .insight-card,
+  .award-item {
+    padding: 21px 18px;
+    border-radius: 20px;
+  }
+
+  .project-card h3,
+  .leadership-card h3,
+  .insight-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .awards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .award-item {
+    min-height: 0;
+    padding: 16px 13px;
+  }
+
+  .award-year {
+    margin-bottom: 10px;
+    font-size: 0.65rem;
+  }
+
+  .award-item h3 {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .insight-card a {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .contact-section {
+    padding-bottom: 72px;
+  }
+
+  .contact-panel {
+    gap: 20px;
+    padding: 24px 18px;
+    border-radius: 22px;
   }
 
   .contact-actions {
@@ -627,5 +886,31 @@ h3 {
 
   .contact-actions .btn {
     width: 100%;
+  }
+
+  .site-footer {
+    padding: 22px 0 32px;
+  }
+
+  .footer-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .nav-actions .btn.small {
+    padding: 0 8px;
+    font-size: 0.7rem;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
   }
 }
